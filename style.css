@@ -545,4 +545,7 @@ input.invalid {
    .mobile-cart-expand .text-right {
    	float: right;
    }
+   .btn-primary, .back-btn {
+   	font-size: 14px !important;
+   }
 }
