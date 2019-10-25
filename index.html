@@ -1,0 +1,469 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+   <!-- Required meta tags -->
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+   <!-- Bootstrap CSS -->
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+   <link rel="stylesheet" href="style.css">
+
+   <title>MultiStep Payment form</title>
+</head>
+
+<body>
+
+   <header class="header-section pt-3 pb-3">
+      <div class="container">
+         <div class="row align-items-center">
+            <div class="col-5 logo">
+               <img class="d-none d-md-block" src="img/coolshop-logo.svg">
+               <img class="d-block d-md-none" src="img/coolshop-logo-small.svg">
+            </div>
+            <div class="col-7 text-right header-right">
+               <span class="d-block d-sm-block d-md-none">
+                  Sikker forbindelse
+                  <svg class="svg-inline--fa fa-lock-alt fa-w-14" aria-hidden="true" focusable="false" data-prefix="fal" data-icon="lock-alt" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg="">
+                     <path fill="currentColor" d="M224 420c-11 0-20-9-20-20v-64c0-11 9-20 20-20s20 9 20 20v64c0 11-9 20-20 20zm224-148v192c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V272c0-26.5 21.5-48 48-48h16v-64C64 71.6 136-.3 224.5 0 312.9.3 384 73.1 384 161.5V224h16c26.5 0 48 21.5 48 48zM96 224h256v-64c0-70.6-57.4-128-128-128S96 89.4 96 160v64zm320 240V272c0-8.8-7.2-16-16-16H48c-8.8 0-16 7.2-16 16v192c0 8.8 7.2 16 16 16h352c8.8 0 16-7.2 16-16z"></path>
+                  </svg>
+               </span>
+               <p class="d-none d-md-block">
+                  <svg class="svg-inline--fa fa-lock-alt fa-w-14" aria-hidden="true" focusable="false" data-prefix="fal" data-icon="lock-alt" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg="">
+                     <path fill="currentColor" d="M224 420c-11 0-20-9-20-20v-64c0-11 9-20 20-20s20 9 20 20v64c0 11-9 20-20 20zm224-148v192c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V272c0-26.5 21.5-48 48-48h16v-64C64 71.6 136-.3 224.5 0 312.9.3 384 73.1 384 161.5V224h16c26.5 0 48 21.5 48 48zM96 224h256v-64c0-70.6-57.4-128-128-128S96 89.4 96 160v64zm320 240V272c0-8.8-7.2-16-16-16H48c-8.8 0-16 7.2-16 16v192c0 8.8 7.2 16 16 16h352c8.8 0 16-7.2 16-16z"></path>
+                  </svg>
+                  Denne forbindelse er krypteret og vi behandler alle dine oplysninger fortroligt.
+               </p>
+
+            </div>
+         </div>
+      </div>
+   </header>
+
+   <section id="steps-bar">
+      <div class="container">
+         <div class="row">
+            <div class="col-md-8 col-12 offset-md-2">
+               <!-- Circles which indicates the steps of the form: -->
+               <div class="steps pt-4 pb-4">
+                  <div class="row">
+
+                     <span class="step-out col text-center" id="tab-0">
+                        <div class="step">
+                           <svg class="check-finished" aria-hidden="true" focusable="false" data-prefix="fal" data-icon="check" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg="">
+                              <path fill="currentColor"
+                                 d="M413.505 91.951L133.49 371.966l-98.995-98.995c-4.686-4.686-12.284-4.686-16.971 0L6.211 284.284c-4.686 4.686-4.686 12.284 0 16.971l118.794 118.794c4.686 4.686 12.284 4.686 16.971 0l299.813-299.813c4.686-4.686 4.686-12.284 0-16.971l-11.314-11.314c-4.686-4.686-12.284-4.686-16.97 0z">
+                              </path>
+                           </svg>
+                        </div>
+                        <p>Kurv</p>
+                     </span>
+
+                     <span class="step-out col text-center active" id="tab-1">
+                        <div class="step">
+
+                           <svg class="check" aria-hidden="true" focusable="false" data-prefix="fal" data-icon="check" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg="">
+                              <path fill="currentColor"
+                                 d="M413.505 91.951L133.49 371.966l-98.995-98.995c-4.686-4.686-12.284-4.686-16.971 0L6.211 284.284c-4.686 4.686-4.686 12.284 0 16.971l118.794 118.794c4.686 4.686 12.284 4.686 16.971 0l299.813-299.813c4.686-4.686 4.686-12.284 0-16.971l-11.314-11.314c-4.686-4.686-12.284-4.686-16.97 0z">
+                              </path>
+                           </svg>
+
+                           <svg class="user" aria-hidden="true" focusable="false" data-prefix="fal" data-icon="user" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg="">
+                              <path fill="currentColor"
+                                 d="M313.6 288c-28.7 0-42.5 16-89.6 16-47.1 0-60.8-16-89.6-16C60.2 288 0 348.2 0 422.4V464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48v-41.6c0-74.2-60.2-134.4-134.4-134.4zM416 464c0 8.8-7.2 16-16 16H48c-8.8 0-16-7.2-16-16v-41.6C32 365.9 77.9 320 134.4 320c19.6 0 39.1 16 89.6 16 50.4 0 70-16 89.6-16 56.5 0 102.4 45.9 102.4 102.4V464zM224 256c70.7 0 128-57.3 128-128S294.7 0 224 0 96 57.3 96 128s57.3 128 128 128zm0-224c52.9 0 96 43.1 96 96s-43.1 96-96 96-96-43.1-96-96 43.1-96 96-96z">
+                              </path>
+                           </svg>
+
+
+                        </div>
+                        <p>Kundeinfo</p>
+                     </span>
+                     <span class="step-out col text-center" id="tab-2">
+                        <div class="step">
+
+                           <svg class="check" aria-hidden="true" focusable="false" data-prefix="fal" data-icon="check" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg="">
+                              <path fill="currentColor"
+                                 d="M413.505 91.951L133.49 371.966l-98.995-98.995c-4.686-4.686-12.284-4.686-16.971 0L6.211 284.284c-4.686 4.686-4.686 12.284 0 16.971l118.794 118.794c4.686 4.686 12.284 4.686 16.971 0l299.813-299.813c4.686-4.686 4.686-12.284 0-16.971l-11.314-11.314c-4.686-4.686-12.284-4.686-16.97 0z">
+                              </path>
+                           </svg>
+
+                           <svg class="shipping-fast" aria-hidden="true" focusable="false" data-prefix="fal" data-icon="shipping-fast" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" data-fa-i2svg="">
+                              <path fill="currentColor"
+                                 d="M280 192c4.4 0 8-3.6 8-8v-16c0-4.4-3.6-8-8-8H40c-4.4 0-8 3.6-8 8v16c0 4.4 3.6 8 8 8h240zm352 192h-24V275.9c0-16.8-6.8-33.3-18.8-45.2l-83.9-83.9c-11.8-12-28.3-18.8-45.2-18.8H416V78.6c0-25.7-22.2-46.6-49.4-46.6H113.4C86.2 32 64 52.9 64 78.6V96H8c-4.4 0-8 3.6-8 8v16c0 4.4 3.6 8 8 8h240c4.4 0 8-3.6 8-8v-16c0-4.4-3.6-8-8-8H96V78.6c0-8.1 7.8-14.6 17.4-14.6h253.2c9.6 0 17.4 6.5 17.4 14.6V384H207.6C193 364.7 170 352 144 352c-18.1 0-34.6 6.2-48 16.4V288H64v144c0 44.2 35.8 80 80 80s80-35.8 80-80c0-5.5-.6-10.8-1.6-16h195.2c-1.1 5.2-1.6 10.5-1.6 16 0 44.2 35.8 80 80 80s80-35.8 80-80c0-5.5-.6-10.8-1.6-16H632c4.4 0 8-3.6 8-8v-16c0-4.4-3.6-8-8-8zm-488 96c-26.5 0-48-21.5-48-48s21.5-48 48-48 48 21.5 48 48-21.5 48-48 48zm272-320h44.1c8.4 0 16.7 3.4 22.6 9.4l83.9 83.9c.8.8 1.1 1.9 1.8 2.8H416V160zm80 320c-26.5 0-48-21.5-48-48s21.5-48 48-48 48 21.5 48 48-21.5 48-48 48zm80-96h-16.4C545 364.7 522 352 496 352s-49 12.7-63.6 32H416v-96h160v96zM256 248v-16c0-4.4-3.6-8-8-8H8c-4.4 0-8 3.6-8 8v16c0 4.4 3.6 8 8 8h240c4.4 0 8-3.6 8-8z">
+                              </path>
+                           </svg>
+
+                        </div>
+                        <p>Levering</p>
+                     </span>
+                     <span class="step-out col text-center" id="tab-3">
+                        <div class="step">
+
+                           <svg class="check" aria-hidden="true" focusable="false" data-prefix="fal" data-icon="check" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg="">
+                              <path fill="currentColor"
+                                 d="M413.505 91.951L133.49 371.966l-98.995-98.995c-4.686-4.686-12.284-4.686-16.971 0L6.211 284.284c-4.686 4.686-4.686 12.284 0 16.971l118.794 118.794c4.686 4.686 12.284 4.686 16.971 0l299.813-299.813c4.686-4.686 4.686-12.284 0-16.971l-11.314-11.314c-4.686-4.686-12.284-4.686-16.97 0z">
+                              </path>
+                           </svg>
+
+                           <svg class="credit-card" aria-hidden="true" focusable="false" data-prefix="fal" data-icon="credit-card" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" data-fa-i2svg="">
+                              <path fill="currentColor"
+                                 d="M528 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h480c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zM48 64h480c8.8 0 16 7.2 16 16v48H32V80c0-8.8 7.2-16 16-16zm480 384H48c-8.8 0-16-7.2-16-16V224h512v208c0 8.8-7.2 16-16 16zm-336-84v8c0 6.6-5.4 12-12 12h-72c-6.6 0-12-5.4-12-12v-8c0-6.6 5.4-12 12-12h72c6.6 0 12 5.4 12 12zm192 0v8c0 6.6-5.4 12-12 12H236c-6.6 0-12-5.4-12-12v-8c0-6.6 5.4-12 12-12h136c6.6 0 12 5.4 12 12z">
+                              </path>
+                           </svg>
+
+                        </div>
+                        <p>Betaling</p>
+
+                     </span>
+                     <span class="step-out col text-center" id="tab-4">
+                        <div class="step">
+
+                           <svg class="box-check" aria-hidden="true" focusable="false" data-prefix="fal" data-icon="box-check" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" data-fa-i2svg=""><path fill="currentColor" d="M492.5 133.4L458.9 32.8C452.4 13.2 434.1 0 413.4 0H98.6c-20.7 0-39 13.2-45.5 32.8L2.5 184.6c-1.6 4.9-2.5 10-2.5 15.2V464c0 26.5 21.5 48 48 48h400c106 0 192-86 192-192 0-90.7-63-166.5-147.5-186.6zM272 32h141.4c6.9 0 13 4.4 15.2 10.9l28.5 85.5c-3-.1-6-.5-9.1-.5-56.8 0-107.7 24.8-142.8 64H272V32zM83.4 42.9C85.6 36.4 91.7 32 98.6 32H240v160H33.7L83.4 42.9zM48 480c-8.8 0-16-7.2-16-16V224h249.9c-16.4 28.3-25.9 61-25.9 96 0 66.8 34.2 125.6 86 160H48zm400 0c-88.2 0-160-71.8-160-160s71.8-160 160-160 160 71.8 160 160-71.8 160-160 160zm64.6-221.7c-3.1-3.1-8.1-3.1-11.2 0l-69.9 69.3-30.3-30.6c-3.1-3.1-8.1-3.1-11.2 0l-18.7 18.6c-3.1 3.1-3.1 8.1 0 11.2l54.4 54.9c3.1 3.1 8.1 3.1 11.2 0l94.2-93.5c3.1-3.1 3.1-8.1 0-11.2l-18.5-18.7z"></path></svg>
+
+                        </div>
+                        <p>Succes</p>
+                     </span>
+                  </div>
+               </div>
+            </div>
+         </div>
+   </section>
+
+   <div class="mobile-cart-expand d-block d-sm-block d-md-none mb-5"  href="#order-details-list" data-toggle="collapse" aria-expanded="true">
+      <span class="text-left">
+         <svg class="svg-inline--fa fa-shopping-cart fa-w-18" aria-hidden="true" focusable="false" data-prefix="fal" data-icon="shopping-cart" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" data-fa-i2svg=""><path fill="currentColor" d="M551.991 64H129.28l-8.329-44.423C118.822 8.226 108.911 0 97.362 0H12C5.373 0 0 5.373 0 12v8c0 6.627 5.373 12 12 12h78.72l69.927 372.946C150.305 416.314 144 431.42 144 448c0 35.346 28.654 64 64 64s64-28.654 64-64a63.681 63.681 0 0 0-8.583-32h145.167a63.681 63.681 0 0 0-8.583 32c0 35.346 28.654 64 64 64 35.346 0 64-28.654 64-64 0-17.993-7.435-34.24-19.388-45.868C506.022 391.891 496.76 384 485.328 384H189.28l-12-64h331.381c11.368 0 21.177-7.976 23.496-19.105l43.331-208C578.592 77.991 567.215 64 551.991 64zM240 448c0 17.645-14.355 32-32 32s-32-14.355-32-32 14.355-32 32-32 32 14.355 32 32zm224 32c-17.645 0-32-14.355-32-32s14.355-32 32-32 32 14.355 32 32-14.355 32-32 32zm38.156-192H171.28l-36-192h406.876l-40 192z"></path></svg>
+         Skjul kurv (1 vare)
+      </span>
+      <span class="text-right">1449 kr</span>
+   </div>
+
+   <div class="container mt-5">
+      <div class="row">
+
+         <div class="col-md-5 order-last mb-3 collapse show" id="order-details-list" aria-expanded="false">
+            <div class="form-top mb-2">
+               <h2>Ordreoversigt</h2>
+               <span><a href="" class="">Rediger</a></span>
+            </div>
+            <div class="cart-detais">
+               <div class="card pt-4 pb-3" style="width: 100%;">
+                  <ul class="cart-item pl-3 pr-3">
+                     <li class="mb-2">
+                        <div class="row no-gutters">
+                           <div class="col-3">
+                              <img src="img/product.jpg" alt="">
+                           </div>
+                           <div class="col-7 item-name">
+                              <a href="">This is a wider card with supporting text below</a>
+                           </div>
+                           <div class="col-2 item-price">
+                              <p><span>1x</span><br>1199 kr</p>
+                           </div>
+                        </div>
+                     </li>
+                     <li class="mb-2">
+                        <div class="row no-gutters">
+                           <div class="col-3">
+                              <img src="img/product.jpg" alt="">
+                           </div>
+                           <div class="col-7 item-name">
+                              <a href="">This is a wider card with supporting text below</a>
+                           </div>
+                           <div class="col-2 item-price">
+                              <p><span>1x</span><br>1199 kr</p>
+                           </div>
+                        </div>
+                     </li>
+                  </ul>
+
+                  <hr>
+
+                  <div class="card-details pl-3 pr-3">
+                     <h4>Subtotal <span class="float-right">1199 kr</span></h4>
+                     <h4 class="discount">Premium rabat <span class="float-right">-59 kr</span></h4>
+                     <h4>Fragt <span class="float-right">0 kr</span></h4>
+                  </div>
+
+                  <hr>
+
+                  <div class="cart-total pl-3 pr-3">
+                     <h3>Total <span class="float-right">1140 kr</span></h3>
+                     <p>Skat og moms er inkluderet</p>
+                  </div>
+
+               </div>
+            </div>
+         </div> <!-- card details -->
+
+         <div class="col-md-7">
+            <div class="form-section">
+               <form id="regForm" method="POST" action="#">
+
+                  <div id="pre-loader" class="spinner">
+                     <div class="spinner-icon"></div>
+                  </div>
+
+                  <!-- One "tab" for each step in the form: -->
+                  <div class="tab active" id="tab-1" style="display:block;">
+                     <div class="form-top mb-2">
+                        <h2>Kundeinfo</h2>
+                        <span>Har du allerede en konto? <a href="" class="btn btn-light">login</a></span>
+                     </div>
+
+                     <div class="tab-inner">
+
+                        <div class="form-row" style="width:100%;">
+                           <a class="text-right field-expbtn" href="#company-field" data-toggle="collapse" aria-expanded="false">Levering til arbejdsplads</a>
+
+                           <div id="company-field" class="collapse form-group col-md-12">
+                              <label for="inputCname">Firmanavn</label>
+                              <input type="text" class="form-control" id="inputCname" placeholder="Firmanavn">
+                           </div>
+                           <div class="form-group col-md-12">
+                              <label for="inputFname">Fulde navn</label>
+                              <input type="text" class="form-control" id="inputFname" placeholder="Fulde navn">
+                           </div>
+                           <div class="form-group col-md-12">
+                              <label for="inputRoadHouse">Vejnavn + husnummer</label>
+                              <input type="text" class="form-control" id="inputRoadHouse" placeholder="Vejnavn + husnummer">
+                           </div>
+                        </div>
+                        <div class="form-row">
+                           <div class="form-group col-md-4">
+                              <label for="inputZip">Postnummer</label>
+                              <input type="text" class="form-control" id="inputZip" placeholder="Postnummer">
+                           </div>
+                           <div class="form-group col-md-8">
+                              <label for="inputTown">By</label>
+                              <input type="text" class="form-control" id="inputTown" placeholder="Town" disabled>
+                           </div>
+                        </div>
+
+                        <div class="form-row">
+                           <div class="form-group col-md-6">
+                              <label for="inputPhone">Telefon</label>
+                              <input type="phone" class="form-control" id="inputPhone" placeholder="Telefon">
+                           </div>
+                           <div class="form-group col-md-6">
+                              <label for="inputCountry">Land</label>
+                              <input type="text" class="form-control" id="inputCountry" placeholder="Land" disabled>
+                           </div>
+                        </div>
+
+                        <div class="form-row">
+                           <div class="form-group col-md-12">
+                              <label>E-mail</label>
+                              <input type="email" class="form-control" placeholder="E-mail" oninput="this.className = ''" name="email">
+                           </div>
+
+                           <div class="form-group col-md-12">
+                              <label>Bekræft e-mail </label>
+                              <input type="email" class="form-control" placeholder="Bekræft e-mail" oninput="this.className = ''" name="cemail">
+                           </div>
+                        </div>
+
+                     </div>
+
+                     <div class="form-check mt-3">
+                        <label class="checkcontainer">Ja tak, jeg vil gerne modtage nyhedsbrev og skræddersyet markedsføring fra Coolshop inden for vores sortiment via e-mail. Jeg kan til enhver tid trække mit samtykke tilbage. Læs mere i vores <a
+                              href="">Samtykkeerklæring for elektronisk post</a>
+                           <input type="checkbox">
+                           <span class="checkmark"></span>
+                        </label>
+                     </div>
+
+                     <div class="nextPrev-btn mb-3 mt-3">
+                        <a class="btn back-btn" href="http://fb.com">
+                           <svg style="width: 10px;height: 14px;overflow: hidden;margin-top: -2px;" class="svg-inline--fa fa-chevron-left fa-w-8" aria-hidden="true" focusable="false" data-prefix="fal" data-icon="chevron-left" role="img"
+                              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512" data-fa-i2svg="">
+                              <path fill="currentColor"
+                                 d="M238.475 475.535l7.071-7.07c4.686-4.686 4.686-12.284 0-16.971L50.053 256 245.546 60.506c4.686-4.686 4.686-12.284 0-16.971l-7.071-7.07c-4.686-4.686-12.284-4.686-16.97 0L10.454 247.515c-4.686 4.686-4.686 12.284 0 16.971l211.051 211.05c4.686 4.686 12.284 4.686 16.97-.001z">
+                              </path>
+                           </svg> Tilbage til kurv
+                        </a>
+                        <button type="button" class="btn btn-primary float-right" tabnum="tab-2">Fortsæt til levering</button>
+                     </div>
+
+                  </div><!-- first tab -->
+
+                  <div class="tab" id="tab-2">
+                     <div class="tab-inner previous-infos mb-4">
+                        <h3>Leveringsadresse<a href="" class="float-right">skift</a></h3>
+                        <p>
+                           Mr. Khan<br>
+                           45B/Shonkor, Dhaka, 4300<br>
+                           khans@gmail.com
+                        </p>
+                     </div>
+
+                     <h2>Leveringsmetode</h2>
+                     <div>
+                        <label for="radio1" class="radiobtn">
+                           <input type="radio" id="radio1" checked="checked" name="radio">
+                           <span class="radio-inner">
+                              Bring Hjemmelevering
+                              <p>0 kr (1-2 hverdage)</p>
+                              <div class="radio-expend">
+                                 Få dine varer afsendt allerede i dag - vælg Bring-levering og bestil inden kl. 20.
+                              </div>
+                           </span>
+                        </label>
+                        <label for="radio2" class="radiobtn active">
+                           <input type="radio" id="radio2" checked="checked" name="radio">
+                           <span class="radio-inner">
+                              Afhentning hos Coolshop
+                              <p>0 k</p>
+                              <div class="radio-expend">
+                                 Coolshop<br>
+                                 Bøgildsmindevej 3<br>
+                                 DK-9400 Nørresundby<br>
+                                 Man. til Fre. 12:30 - 17:00<br>
+                                 <span>Du får en SMS/e-mail, når din vare er klar til afhentning.</span>
+                              </div>
+                           </span>
+                        </label>
+                     </div>
+
+                     <div class="nextPrev-btn mb-3 mt-3">
+                        <button type="button" class="btn back-btn" tabnum="tab-1">
+                           <svg style="width: 10px;height: 14px;overflow: hidden;margin-top: -2px;" class="svg-inline--fa fa-chevron-left fa-w-8" aria-hidden="true" focusable="false" data-prefix="fal" data-icon="chevron-left" role="img"
+                              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512" data-fa-i2svg="">
+                              <path fill="currentColor"
+                                 d="M238.475 475.535l7.071-7.07c4.686-4.686 4.686-12.284 0-16.971L50.053 256 245.546 60.506c4.686-4.686 4.686-12.284 0-16.971l-7.071-7.07c-4.686-4.686-12.284-4.686-16.97 0L10.454 247.515c-4.686 4.686-4.686 12.284 0 16.971l211.051 211.05c4.686 4.686 12.284 4.686 16.97-.001z">
+                              </path>
+                           </svg> Tilbage til kundeinfo
+                        </button>
+                        <button type="button" class="btn btn-primary float-right" tabnum="tab-3">Fortsæt til betaling</button>
+                     </div>
+                  </div> <!-- second tab -->
+
+                  <div class="tab" id="tab-3">
+                     <div class="tab-inner previous-infos mb-4">
+                        <h3>Kontaktinfo<a href="" class="float-right">skift</a></h3>
+                        <p>
+                           Mr. Khan<br>
+                           45B/Shonkor, Dhaka, 4300<br>
+                           khans@gmail.com
+                        </p>
+                     </div>
+                     <div class="tab-inner previous-infos mb-4">
+                        <h3>Leveringsmetode<a href="" class="float-right">skift</a></h3>
+                        <p>Afhentning hos Coolshop</p>
+                     </div>
+
+                     <a class="text-right field-expbtn" href="#alternative-address" data-toggle="collapse" aria-expanded="false">Brug en anden faktureringsadresse</a>
+
+                     <div class="tab-inner collapse mb-3" id="alternative-address">
+                        <div class="form-row">
+                           <div class="form-group col-md-12">
+                              <label for="inputFname">Firmanavn (valgfri)</label>
+                              <input type="text" class="form-control" id="inputFname">
+                           </div>
+                           <div class="form-group col-md-12">
+                              <label for="inputRoadHouse">Fulde navn</label>
+                              <input type="text" class="form-control" id="inputRoadHouse">
+                           </div>
+                        </div>
+                        <div class="form-row">
+                           <div class="form-group col-md-4">
+                              <label for="inputZip">Postnummer</label>
+                              <input type="text" class="form-control" id="inputZip">
+                           </div>
+                           <div class="form-group col-md-8">
+                              <label for="inputTown">By</label>
+                              <input type="text" class="form-control" id="inputTown" disabled>
+                           </div>
+                        </div>
+
+                        <div class="form-row">
+                           <div class="form-group col-md-6">
+                              <label for="inputPhone">Vejnavn + husnummer</label>
+                              <input type="phone" class="form-control" id="inputPhone">
+                           </div>
+                           <div class="form-group col-md-6">
+                              <label for="inputCountry">Land</label>
+                              <input type="text" class="form-control" id="inputCountry" placeholder="Country" disabled>
+                           </div>
+                        </div>
+
+                     </div>
+
+                     <div>
+                        <h2>Leveringsmetode</h2>
+                        <div class="payment-method p-2">
+                           <div class="row">
+                              <div class="col-8">
+                                 <div class="card-info">
+                                    <h3>Kredit- og debitkort</h3>
+                                    <span>0 kr</span>
+                                 </div>
+                              </div>
+                              <div class="col-4">
+                                 <div class="card-images">
+                                    <img src="https://coolpay.api.prod.coolshop.com/media/dankort-visa-mc.png" alt="">
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+
+                     <div class="form-check mt-3">
+                        <label class="checkcontainer">
+                           Donér 20 kr. til vores børnefond, CoolUnite
+                           <img src="https://static.coolshop.com/_origami/images/logo/original/coolunite-logo.png">
+                           <a href="/minisite/t/coolunite">Læs mere</a>
+                           <input type="checkbox">
+                           <span class="checkmark"></span>
+                        </label>
+                     </div>
+
+                     <div class="nextPrev-btn mb-3 mt-3">
+                        <div class="row align-items-end">
+                           <div class="col-5">
+                              <button type="button" class="btn back-btn" tabnum="tab-2">
+                                 <svg style="width: 10px;height: 14px;overflow: hidden;margin-top: -2px;" class="svg-inline--fa fa-chevron-left fa-w-8" aria-hidden="true" focusable="false" data-prefix="fal" data-icon="chevron-left" role="img"
+                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512" data-fa-i2svg="">
+                                    <path fill="currentColor"
+                                       d="M238.475 475.535l7.071-7.07c4.686-4.686 4.686-12.284 0-16.971L50.053 256 245.546 60.506c4.686-4.686 4.686-12.284 0-16.971l-7.071-7.07c-4.686-4.686-12.284-4.686-16.97 0L10.454 247.515c-4.686 4.686-4.686 12.284 0 16.971l211.051 211.05c4.686 4.686 12.284 4.686 16.97-.001z">
+                                    </path>
+                                 </svg> Tilbage til levering
+                              </button>
+                           </div>
+                           <div class="col-7">
+                              <div class="card">
+                                 <div class="card-body p-1">
+                                    <div class="form-check mt-3">
+                                       <label class="checkcontainer">
+                                          <p>Jeg accepterer Coolshops <a href="https://www.coolshop.dk/pages/document/terms-COOL/?inline" class="iframe">handelsbetingelser</a> samt Coolshops <a
+                                                href="https://www.coolshop.dk/pages/document/privacy-COOL/?inline" class="iframe">privatlivspolitik</a>.</p>
+                                          Derudover accepterer jeg at indgå i Coolshops fordelsklub og accepterer dermed Coolshop <a href="https://www.coolshop.dk/pages/document/premium-COOL/?inline" class="iframe">Premium-betingelserne</a>.
+                                          <input type="checkbox">
+                                          <span class="checkmark"></span>
+                                       </label>
+                                    </div>
+                                 </div>
+                              </div>
+                              <button type="submit" class="btn btn-primary float-right mt-4">Betal</button>
+                           </div>
+                        </div>
+                     </div>
+                  </div> <!-- third tab -->
+
+               </form><!-- form fields -->
+
+            </div>
+         </div>
+
+      </div>
+   </div>
+
+   <!-- Optional JavaScript -->
+   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+   <script src="main.js"></script>
+</body>
+
+</html>
