@@ -508,8 +508,11 @@ input.invalid {
 #tab-3 .nextPrev-btn button.float-right {
    width: 100%;
 }
-.mobile-cart-expand.collapsed .fa-chevron-down {
+.mobile-cart-expand .fa-chevron-down {
 	transform: rotate(180deg);
+}
+.mobile-cart-expand.collapsed .fa-chevron-down {
+	transform: rotate(0deg);
 }
 @media only screen and (max-width: 768px) {
    .steps::before {
